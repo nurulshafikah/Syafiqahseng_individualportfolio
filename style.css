@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    background-color: #000;
+    color: white;
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #ff6fbf; /* Pink color */
+    font-weight: 800;
+    cursor: pointer;
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ff6fbf; /* Pink color */
+    border-bottom: 3px solid #ff6fbf;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 9% 5rem;
+    margin-top: 6rem; /* To avoid overlap with fixed header */
+}
+
+.home-content {
+    max-width: 50%;
+}
+
+.home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    color: white;
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: white; /* Explicitly set to white */
+}
+
+span {
+    color: #ff6fbf; /* Pink color */
+}
+
+.home-content p {
+    font-size: 1.6rem;
+    color: white;
+}
+
+.home-img {
+    width: 30vw;
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #ff6fbf; /* Pink circular border */
+    border-radius: 50%;
+}
+
+.home-img img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(255, 111, 191, 0.7); /* Soft pink glow */
+    transition: transform 0.3s ease-in-out;
+}
+
+.home-img img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: transparent;
+    border: 0.2rem solid #ff6fbf; /* Pink border */
+    font-size: 3rem; /* Increased icon size */
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    color: #ff6fbf; /* Pink color */
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: black;
+    background-color: #ff6fbf; /* Pink background on hover */
+    box-shadow: 0 0 25px #ff6fbf;
+    transform: scale(1.2); /* Enlarge the icon when clicked */
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #ff6fbf; /* Pink color */
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #ff6fbf; /* Pink border */
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ff6fbf;
+    color: black;
+    box-shadow: 0 0 25px #ff6fbf;
+}
+
+/* Footer */
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-top: 2px solid #ff6fbf; /* Pink border */
+}
+
+footer p {
+    margin: 0;
+}
+
+#bouncingText {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #ff6fbf; /* Pink color */
+    animation: bounce 2s ease-in-out infinite;
+}
+
+/* Bouncing animation */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

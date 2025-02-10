@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut Icon" type="image/png" href="sakura.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8d6e1; /* Soft pink background */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #fff; /* White background for sidebar */
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align links to the left */
+            color: #d81b60; /* Pink font color */
+            box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1); /* Light shadow for the sidebar */
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #d81b60; /* Pink for links */
+            font-size: 1.2rem;
+            margin: 15px 0; /* Space out the links */
+            padding: 10px;
+            width: 100%;
+            text-align: left; /* Align the text to the left */
+            padding-left: 20px; /* Add padding to left for better alignment */
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #ff6fbf; /* Light pink background on hover */
+            color: white; /* White text on hover */
+        }
+
+        /* Container Styling */
+        .container-fluid {
+            margin-left: 270px; /* Add margin to the left for the sidebar */
+            padding: 20px;
+            flex: 1;
+            width: calc(100% - 270px); /* Adjust the container width */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            color: #ff6fbf; /* Pink color */
+            margin-top: 2rem;
+        }
+
+        /* Photo Carousel */
+        .carousel {
+            position: relative;
+            width: 60%; /* Same width for the carousel */
+            height: 60vw; /* Use width to determine height (1x1 aspect ratio) */
+            max-height: 400px; /* Limit height to 400px */
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            border: 5px solid white;
+            border-radius: 10px;
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 2rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* YouTube Video Section */
+        .fav-song {
+            text-align: center;
+            margin-top: 3rem;
+            background-color: #ff6fbf; /* Pink box */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(255, 111, 191, 0.7);
+            max-width: 800px;
+            margin: 3rem auto;
+        }
+
+        .fav-song h2 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        iframe {
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer Section */
+        .footer {
+            text-align: center;
+            background-color: #fff;
+            padding: 10px 0;
+            margin-top: 20px;
+            color: #d81b60;
+            font-size: 1rem;
+            border-top: 2px solid #ff6fbf; /* Pink line above */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="index.html">Home</a>
+        <a href="aboutme.html">About Me</a> <!-- Added About Me link -->
+        <a href="edubackground.html">Education Background</a>
+        <a href="achivement.html">Achievements</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <!-- Gallery Title -->
+        <h1>A Glimpse of Fiqah's Gallery</h1>
+
+        <!-- Photo Carousel -->
+        <div class="carousel">
+            <div class="carousel-images">
+                <!-- Change images to fiqah1.jpg to fiqah11.jpg -->
+                <img src="fiqah1.jpg" alt="fiqah1">
+                <img src="fiqah2.jpg" alt="fiqah2">
+                <img src="fiqah3.jpg" alt="fiqah3">
+                <img src="fiqah4.jpg" alt="fiqah4">
+                <img src="fiqah5.jpg" alt="fiqah5">
+                <img src="fiqah6.jpg" alt="fiqah6">
+                <img src="fiqah7.jpg" alt="fiqah7">
+                <img src="fiqah8.jpg" alt="fiqah8">
+                <img src="fiqah9.jpg" alt="fiqah9">
+                <img src="fiqah10.jpg" alt="fiqah10">
+                <img src="fiqah11.jpg" alt="fiqah11">
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
+        <!-- YouTube Video Section -->
+        <div class="fav-song">
+            <h2>Canon in D:The Song That Resonates with Syafiqah's Soul</h2>
+            <iframe id="favSongVideo" width="560" height="315" 
+                src="https://www.youtube.com/embed/Ptk_1Dc2iPY?si=dwzlxMeDCvFuQIFe" 
+                title="Canon in D by Pachelbel" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Nurul Shafikah. </p>
+            <p>Disclaimer: This website is designed to fulfil the requirement for IMD318.</p>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-images img');
+            const totalSlides = slides.length;
+
+            if (index >= totalSlides) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = totalSlides - 1;
+            } else {
+                currentSlide = index;
+            }
+
+            slides.forEach(slide => slide.style.display = 'none');
+            slides[currentSlide].style.display = 'block';
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentSlide);
+            setInterval(() => changeSlide(1), 2000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut Icon" type="image/png" href="sakura.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience and Projects</title>
+    <style>
+        /* General Body Styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fde8f0; /* Soft Pink */
+            color: #333; /* Black font */
+            transition: background 0.5s;
+            display: flex;
+            flex-direction: column;
+            padding-top: 10px;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #fff; /* White background for sidebar */
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align links to the left */
+            color: #d81b60; /* Pink font color */
+            box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1); /* Light shadow for the sidebar */
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #d81b60; /* Pink for links */
+            font-size: 1.2rem;
+            margin: 15px 0; /* Space out the links */
+            padding: 10px;
+            width: 100%;
+            text-align: left; /* Align the text to the left */
+            padding-left: 20px; /* Add padding to left for better alignment */
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #ff6fbf; /* Light pink background on hover */
+            color: white; /* White text on hover */
+        }
+
+        /* Container Styling */
+        .container-fluid {
+            margin-left: 270px; /* Add margin to the left for the sidebar */
+            padding: 10px;
+            width: calc(100% - 270px); /* Adjust the container width */
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start; /* Align the content to the left */
+        }
+
+        /* Header Styling */
+        .header-title {
+            background-color: #d81b60; /* Pink background for title */
+            color: #fff; /* White text */
+            padding: 10px;
+            border-radius: 0 10px 10px 0;
+            font-size: 1.5rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Section Containers */
+        .section {
+            background-color: #fff; /* White container */
+            margin: 10px 0; /* Reduced spacing between sections */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%; /* Set section width to 80% */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section h3 {
+            text-align: center;
+            color: #d81b60; /* Title color */
+            margin-bottom: 10px;
+        }
+
+        .content {
+            margin-top: 15px;
+        }
+
+        /* Bullet Point List */
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* Buttons */
+        .toggle-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            margin: 8px auto;
+            background-color: #d81b60; /* Pink button */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: auto;
+        }
+
+        .toggle-btn:hover {
+            background-color: #ad1457; /* Darker Pink */
+        }
+
+        .bg-btn {
+            background-color: #333; /* Black */
+        }
+
+        .bg-btn:hover {
+            background-color: #000;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            margin: 10px;
+            color: #d81b60; /* Pink copyright text */
+            font-size: 0.9rem;
+            border-top: 1px solid #d81b60; /* Line above footer */
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="index.html">Home</a>
+        <a href="aboutme.html">About Me</a> <!-- Added About Me link -->
+        <a href="edubackground.html">Education Background</a>
+        <a href="achivement.html">Achievements</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <h2>Experiences and Projects</h2>
+
+        <!-- Section: Experience -->
+        <div class="section experience">
+            <div class="header-title experience">Experiences</div>
+            <div class="content">
+                <button class="toggle-btn" id="experience-toggle" onclick="toggleSection('experience')">Show More</button>
+                <div id="experience" style="display: none;">
+                    <ul>
+                        <li>MC+ (online staff) - 2022 to Current</li>
+                        <li>Student Council of Cyberjaya</li>
+                        <li>Ahli PKPIM UKM 2024/2025</li>
+                        <li>Majlis Perwakilan Pelajar 2023/2024</li>
+                        <li>Exco Hal Ehwal Kampus Kuala Lumpur KMUKM sesi 2023/2024</li>
+                        <li>Organisasi Pengurusan Asrama 2023/2024</li>
+                        <li>PIC Debat Naib Chanselor 2023/2024</li>
+                        <li>Exco Teknikal Kelab Srikandi 2023/2024</li>
+                        <li>Exco Teknikal Marhaban Ramadhan 2023/2024</li>
+                        <li>Exco Pemasaran PDR Dinner</li>
+                        <li>Exco Teknikal Pesta Ang Pow 2023/2024</li>
+                        <li>Exco Tugas-Tugas Khas Kelab Debat 2023/2024</li>
+                        <li>Exco Pemasaran Magik 2022/2023</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Projects -->
+        <div class="section projects">
+            <div class="header-title projects">Projects</div>
+            <div class="content">
+                <button class="toggle-btn" id="projects-toggle" onclick="toggleSection('projects')">Show More</button>
+                <div id="projects" style="display: none;">
+                    <ul>
+                        <li>Projek Ramadhan Kampus Kuala Lumpur</li>
+                        <li>UKM bus expansion project (from Monday to Friday & Saturday)</li>
+                        <li>Distribution Project of 300 Exam Kits to UKM Kuala Lumpur and Cheras Campus</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Background Button -->
+        <div style="text-align: center;">
+            <button class="toggle-btn bg-btn" onclick="changeBackground()">Change Background</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Nurul Shafikah. </p>
+            <p>Disclaimer: This website is designed to fulfil the requirement for IMD318.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Function to toggle the visibility of sections
+        function toggleSection(id) {
+            const section = document.getElementById(id);
+            const toggleButton = document.getElementById(id + '-toggle');
+            
+            if (section.style.display === 'none') {
+                section.style.display = 'block';
+                toggleButton.innerText = 'Hide';  // Change text to "Hide" when shown
+            } else {
+                section.style.display = 'none';
+                toggleButton.innerText = 'Show More';  // Change text to "Show More" when hidden
+            }
+        }
+
+        // Function to change the background color dynamically
+        function changeBackground() {
+            const colors = ['#fde8f0', '#fff', '#fce4ec', '#d81b60'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>

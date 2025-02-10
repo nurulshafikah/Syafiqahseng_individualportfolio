@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut Icon" type=image/png" 
+    href="sakura.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8d6e1; /* Soft pink background */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #fff; /* White background for sidebar */
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align links to the left */
+            color: #d81b60; /* Pink font color */
+            box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1); /* Light shadow for the sidebar */
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: #d81b60; /* Pink for links */
+            font-size: 1.2rem;
+            margin: 15px 0;
+            padding: 10px;
+            display: block;
+            padding-left: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #ff6fbf;
+            color: white;
+        }
+
+        /* Main Content Styling */
+        .container {
+            margin-left: 270px;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ff6fbf;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Layout for Form, Map, and Clock */
+        .contact-layout {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .contact-form-container {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .map-container {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .clock-date-weather {
+            text-align: center;
+            margin-top: 20px;
+            color: #d81b60;
+        }
+
+        .clock-date-weather div {
+            font-size: 1.2rem;
+        }
+
+        .clock-date-weather .clock {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 100%;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background-color: #d81b60;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #ff6fbf;
+        }
+
+        /* Social Icons */
+        .social-links {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            font-size: 2rem;
+            color: #d81b60;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ff6fbf;
+        }
+
+        /* Maps */
+        .maps iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer Section */
+        .footer {
+            text-align: center;
+            background-color: #fff;
+            padding: 10px 0;
+            color: #d81b60;
+            margin-top: 20px;
+            border-top: 2px solid #ff6fbf;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="index.html">Home</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="edubackground.html">Education Background</a>
+        <a href="achivement.html">Achievements</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Title -->
+        <h1>Contact Me</h1>
+
+        <!-- Layout for Form, Map, and Clock -->
+        <div class="contact-layout">
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+                <div class="contact-form">
+                    <form action="mailto:yuyuichemiau@gmail.com" method="post" enctype="text/plain">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-container">
+                <div class="maps">
+                    <!-- Google Maps for Sandakan, Sabah -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15943.521285942438!2d118.10962335283857!3d5.838669156918437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x323b6e77a1a9e5b5%3A0x9bf1977d6856dcb8!2sSandakan%2C%20Sabah!5e0!3m2!1sen!2smy!4v1715967921308!5m2!1sen!2smy"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clock, Date, and Weather -->
+        <div class="clock-date-weather">
+            <!-- Clock -->
+            <div class="clock" id="clock"></div>
+            <!-- Date -->
+            <div id="date"></div>
+            <!-- Weather -->
+            <div id="weather"></div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Nurul Shafikah. </p>
+            <p>Disclaimer: This website is designed to fulfil the requirement for IMD318.</p>
+    </div>
+
+    <script>
+        // Clock and Date Functionality
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('date').textContent = now.toLocaleDateString();
+        }
+
+        setInterval(updateClock, 1000); // Update every second
+        updateClock(); // Initial call to set clock immediately
+
+        // Weather Functionality using OpenWeatherMap API (Replace with your API Key)
+        async function getWeather() {
+            const apiKey = 'your_api_key'; // Replace with your OpenWeatherMap API Key
+            const city = 'Sandakan'; // Replace with your city
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+            const response = await fetch(url);
+            const data = await response.json();
+            const temperature = data.main.temp;
+            const description = data.weather[0].description;
+            document.getElementById('weather').textContent = `${temperature}°C, ${description}`;
+        }
+
+        getWeather(); // Call to get the weather
+    </script>
+</body>
+</html>
